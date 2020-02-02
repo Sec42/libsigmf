@@ -2,7 +2,7 @@
 ########################################################################
 # Setup project
 ########################################################################
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.10)
 project(libsigmf LANGUAGES CXX)
 
 # c++14 used for auto return type for functions without having to do the -> declaration
@@ -30,7 +30,7 @@ set(libsigmf_deps "")
 
 # flatbuffers
 find_package(Flatbuffers REQUIRED)
-list(APPEND libsigmf_deps flatbuffers::flatbuffers_shared)
+list(APPEND libsigmf_deps flatbuffers::flatbuffers)
 
 # nlohmann_json
 find_package(nlohmann_json REQUIRED)
